@@ -3,5 +3,11 @@ consumidor
 
 **Integrantes:** 
 
-Santiago Ortiz
-Daniel Ochoa
+* Santiago Ortiz
+* Daniel Ochoa
+
+**Nota:**
+
+Por errores en la subida del punto2ditado.py, se agrego una version que no era, en la linea 7 en vez de: 
+* 'semaforo_productor_consumidor = Semaphore(0); #Crear variable'.
+* Debe ir 'semaforo_productor_consumidor = Semaphore(3); #Crear variable'
