@@ -1,0 +1,21 @@
+                        Solución de la parte teórica.
+
+1. El acceso a los recursos compartidos debe hacerse siempre desde la sección 
+crítica porque esto garantiza un mejor control y seguridad sobre los recursos
+compartidos, de no hacerse, es posible que el productor y/o consumidor modifiquen
+valores en el buffer (recursos compartidos), y esto afecte posteriormente a otros 
+productores/consumidores,pues la información que obtengan no será necesariamente 
+la correcta y esto afecte al resultado.
+
+2. La sección crítica debe ser lo más pequeña posible, pues se encarga del control
+en cuanto a la transmisión de información entre hilos (por ejemplo productor
+/consumidor...). Debe cumplir con su función y no ser muy extensa, pues mientras
+mayor sea el tamaño de la sección crítica, mayor es el tiempo en que otros procesos
+o hilos estarán fuera de funcionamiento, puesto que los recursos compartidos están
+siendo utilizados por otro proceso.
+
+3. Se debe sacar una copia de seguridad de las variables compartidas en la sección
+crítica debido a que estas variables, como son compartidas pueden ser editadas en
+otros procesos, conllevando a que en algún punto (fuera de la sección crítica),
+las variables que serán consumidas, hayan sido cambiadas por otro(s) proceso(s)
+/hilo(s) y contenga un valor erróneo o no esperado.
